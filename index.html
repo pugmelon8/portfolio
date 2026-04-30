@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artemis | Product & Visual Designer</title>
+    <!-- Basic Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Englebert&family=Fugaz+One&family=Galindo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <!-- Link to CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,16 +18,16 @@
     <!-- 1. HERO SECTION -->
     <section class="hero" id="hero">
         <nav class="nav-header">
-            <span>Works</span>
-            <img src="images/logo.png" alt="logo">
+            <a href="works.html">Works</a>
+            <a href="index.html"><img src="images/logo.png" class="nav-logo" alt="logo"></a>
             <span>Playground</span>
         </nav>
 
         <div class="hero-content">
-            <h3>This is Artemis</h3>
-            <h1>Product & Visual Designer</h1>
+            <h3>hi im vyyy</h3>
+            <h1>Multimedia Designer</h1>
             <p>startups can count on!</p>
-            <a href="#projects" class="cta-button">Get Started ↗</a>
+            <a href="works.html" class="cta-button">See my works ↗</a>
         </div>
 
         <!-- Burst Images (Placeholders) -->
@@ -58,7 +62,7 @@
             <h2>Design in action</h2>
             <p>Crafting functional, stunning products with founders.</p>
         </div>
-        <div class="project-grid">
+        <div class="project-grid" id="project-grid">
             <!-- Project 1 -->
             <a href="project-one.html" class="project-card">
                 <div class="image-container">
@@ -119,6 +123,10 @@
                 <p>I designed an intuitive platform for creating MVP landing pages quickly.</p>
                 <span class="tag">Visual Design</span>
             </a>
+        </div>
+        <!-- The Load More Button -->
+        <div class="load-more-container">
+            <button id="load-more-btn" class="load-more-btn">Load More</button>
         </div>
     </section>
 
