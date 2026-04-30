@@ -1,41 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- HERO BURST ANIMATION ---
-    setTimeout(() => {
-        const hero = document.getElementById('hero');
-        if(hero) hero.classList.add('loaded');
-    }, 400);
+    // --- 1. HERO BURST ANIMATION ---
+    // Added safety check: only runs if 'hero' exists
+    const hero = document.getElementById('hero');
+    if (hero) {
+        setTimeout(() => {
+            hero.classList.add('loaded');
+        }, 400);
+    }
 
-    // --- LOAD MORE LOGIC ---
+    // --- 2. LOAD MORE LOGIC ---
     const grid = document.getElementById('project-grid');
-    const cards = Array.from(grid.querySelectorAll('.project-card'));
     const loadBtn = document.getElementById('load-more-btn');
-    const limit = 4; // Number of items to show initially
 
-    // 1. Initial State: Hide items beyond the limit
-    if (cards.length <= limit) {
-        loadBtn.style.display = 'none'; // Hide button if we have 4 or fewer
-    } else {
-        cards.forEach((card, index) => {
-            if (index >= limit) card.classList.add('is-hidden');
+    // Added safety check: only runs if BOTH the grid and the button are on the page
+    if (grid && loadBtn) {
+        const cards = Array.from(grid.querySelectorAll('.project-card'));
+        const limit = 4; // Number of items to show initially
+
+        // 1. Initial State: Hide items beyond the limit
+        if (cards.length <= limit) {
+            loadBtn.style.display = 'none'; 
+        } else {
+            cards.forEach((card, index) => {
+                if (index >= limit) card.classList.add('is-hidden');
+            });
+        }
+
+        // 2. Click Event
+        loadBtn.addEventListener('click', () => {
+            cards.forEach(card => card.classList.remove('is-hidden'));
+            loadBtn.style.display = 'none';
+
+            // 3. Centering Logic: If the total is odd, center the last one
+            if (cards.length % 2 !== 0) {
+                cards[cards.length - 1].classList.add('centered-last');
+            }
         });
     }
 
-    // 2. Click Event
-    loadBtn.addEventListener('click', () => {
-        // Show all cards
-        cards.forEach(card => card.classList.remove('is-hidden'));
-        
-        // Hide the button
-        loadBtn.style.display = 'none';
-
-        // 3. Centering Logic: If the total is odd, center the last one
-        if (cards.length % 2 !== 0) {
-            cards[cards.length - 1].classList.add('centered-last');
-        }
-    });
-
-    // --- FOOTER INJECTION ---
+    // --- 3. FOOTER INJECTION ---
+    // This is now "safe" and will run on every page!
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         footerPlaceholder.innerHTML = `
