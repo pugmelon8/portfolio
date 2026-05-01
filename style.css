@@ -377,6 +377,16 @@ body, html {
     margin: 0 auto 30px;
 }
 
+.main-hero-image {
+    width: 100%;
+    margin-top: 50px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.main-hero-image img { width: 100%; display: block; }
+
 /* Overview Grid */
 .project-info-section {
     padding: 80px 5%;
