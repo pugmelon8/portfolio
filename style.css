@@ -377,10 +377,11 @@ body, html {
     margin: 0 auto 30px;
 }
 
+/* Ensure the hero container keeps the rounded corners you have */
 .main-hero-image {
     width: 100%;
     margin-top: 50px;
-    border-radius: 30px;
+    border-radius: 30px; /* Matches your project style */
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.1);
 }
@@ -489,13 +490,4 @@ body, html {
     width: 100% !important; /* Force it to fill the width */
     height: 100% !important; /* Force it to fill the height */
     border: none;
-}
-
-/* Ensure the hero container keeps the rounded corners you have */
-.main-hero-image {
-    width: 100%;
-    margin-top: 50px;
-    border-radius: 30px; /* Matches your project style */
-    overflow: hidden;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
 }
