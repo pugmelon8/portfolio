@@ -472,21 +472,22 @@ body, html {
 
 
 /* Responsive Video Container */
+/* This creates the 16:9 shape */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%; /* 16:9 ratio */
     height: 0;
     overflow: hidden;
     width: 100%;
-    background: #000; /* Black background while loading */
 }
 
+/* This makes the video fill that 16:9 shape */
 .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important; /* Force it to fill the width */
+    height: 100% !important; /* Force it to fill the height */
     border: none;
 }
 
