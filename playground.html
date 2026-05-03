@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hi im vyyy | Multimedia Designer</title>
+    <!-- Basic Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Englebert&family=Fugaz+One&family=Galindo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav-header">
+        <a href="works.html">Works</a>
+        <a href="index.html"><img src="images/logo.png" class="nav-logo" alt="logo"></a>
+        <a href="playground.html">Playground</a>
+    </nav>
+
+    <div id="main-content">
+        <main class="playground-section">
+            <div class="playground-header">
+                <h1>Playground</h1>
+                <p>Experiments, motion, and visual sketches.</p>
+            </div>
+
+            <div class="gallery-grid">
+        
+                <!-- PHOTO ITEM -->
+                <div class="gallery-item" data-type="image" data-src="images/postman.png">
+                    <img src="images/postman.png" alt="PostmanPoster">
+                </div>
+
+                <!-- YOUTUBE VIDEO ITEM -->
+                <!-- VIDEO ITEM (YouTube) -->
+                <div class="gallery-item video-type" data-type="video" data-src="https://www.youtube.com/embed/a9OP219pVC4?autoplay=1">
+                    <img src="images/vcap.png" alt="VoChongAPhu">
+                    <div class="item-caption">Vợ Chồng A Phủ - Parody</div>
+                </div>
+
+                <!-- VIDEO ITEM (YouTube) -->
+                <div class="gallery-item video-type" data-type="video" data-src="https://www.youtube.com/embed/4uVK603CCro?autoplay=1">
+                    <img src="images/lol.png" alt="LawsOfLove">
+                    <div class="item-caption">Laws of Love - Official trailer (The Devil Judge genre recreation)</div>
+                </div>
+
+                <div class="gallery-item video-type" data-type="video" data-src="https://www.youtube.com/embed/IuMuVebTOLI?autoplay=1">
+                    <img src="images/DigiVidA3.png" alt="DigiVidA3">
+                </div>
+
+                <div class="gallery-item video-type" data-type="video" data-src="https://www.youtube.com/embed/YPnMgyRhzw8?autoplay=1">
+                    <img src="images/neverending.png" alt="NeverendingStory">
+                    <div class="item-caption">The Neverending Story - Book review</div>
+                </div>
+
+                <div class="gallery-item video-type" data-type="video" data-src="https://www.youtube.com/embed/vkxXj57e1hk?autoplay=1">
+                    <img src="images/DigiVid A1.png" alt="DigiVidA1">
+                </div>
+
+                <div class="gallery-item video-type" data-type="video" data-src="https://www.youtube.com/embed/wkq-NOhBEKY?autoplay=1">
+                    <img src="images/Dune.png" alt="DunePartTwo">
+                    <div class="item-caption">Dune: Part Two - Video Essay</div>
+                </div>
+
+                <div class="gallery-item video-type" data-type="video" data-src="https://www.youtube.com/embed/k1X9kzhUrWY?autoplay=1">
+                    <img src="images/being.png" alt="BeingJohnMalkovich">
+                    <div class="item-caption">Being John Malkovich - Video Essay</div>
+                </div>
+
+                <!-- Add as many as you want... -->
+
+            </div>
+        </main>
+    </div>
+
+    <div id="lightbox-overlay" class="hidden">
+        <button id="close-btn">&times;</button>
+        <div id="lightbox-content">
+            <!-- Content gets injected here by JS -->
+        </div>
+    </div>
+
+    <!-- CONTACT FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
