@@ -396,8 +396,8 @@ body, html {
 
 .overview-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
+    grid-template-columns: 2fr 2fr;
+    /* gap: 60px; */
 }
 
 .meta-info {
@@ -456,12 +456,13 @@ body, html {
 
 .project-pagination a {
     text-decoration: none;
-    color: #888;
+    color: #000000;
     font-weight: 500;
     transition: color 0.3s;
+    font-size: 25px;
 }
 
-.project-pagination a:hover { color: #222; }
+.project-pagination a:hover { color: var(--primary-green)}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -479,6 +480,7 @@ body, html {
     overflow: hidden;
     width: 100%;
     background: #000; /* Black background while loading */
+    border-radius: 30px; /* Matches your project style */
 }
 
 .video-container iframe {
