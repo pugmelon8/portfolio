@@ -64,3 +64,48 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 });
+
+
+const overlay = document.getElementById('lightbox-overlay');
+const contentArea = document.getElementById('lightbox-content');
+const closeBtn = document.getElementById('close-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const type = item.getAttribute('data-type');
+        const src = item.getAttribute('data-src');
+
+        // Clear previous content
+        contentArea.innerHTML = '';
+
+        if (type === 'image') {
+            const img = document.createElement('img');
+            img.src = src;
+            contentArea.appendChild(img);
+        } else if (type === 'video') {
+            contentArea.innerHTML = `
+                <div class="video-wrapper">
+                    <iframe src="${src}" allow="autoplay; fullscreen"></iframe>
+                </div>
+            `;
+        }
+
+        // Show overlay
+        overlay.classList.remove('hidden');
+    });
+});
+
+// Close functionality
+closeBtn.addEventListener('click', () => {
+    overlay.classList.add('hidden');
+    contentArea.innerHTML = ''; // Stop video playback
+});
+
+// Close when clicking outside the content
+overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+        overlay.classList.add('hidden');
+        contentArea.innerHTML = '';
+    }
+});
